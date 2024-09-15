@@ -1,0 +1,45 @@
+:root {
+  --background-color: #ffffff;
+  --main-color: #007bff;
+  --text-color: #333333;
+  --border-color: #dddddd;
+  --min-padding: 8px;
+  --min-gap: 8px;
+  --white: #ffffff;
+  --content-margin: 16px;
+  --box-margin: 24px;
+  --dark-gray: #808080;
+}
+
+body {
+  font-family: "Sans-serif";
+  color: var(--text-color);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  /** TODO: 一旦、横幅を90%にする スマホとPCでブレイクポイントを設定する */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #ffffff;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: var(--main-color);
+}
+
+footer {
+  margin-top: auto;
+  height: 20px;
+  background-color: var(--border-color);
+}
