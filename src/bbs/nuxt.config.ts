@@ -9,5 +9,11 @@ export default defineNuxtConfig({
     '@/assets/css/reset.css'
   ],
 
-  modules: ['@nuxt/icon']
+  modules: ['@nuxt/icon'],
+
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL,
+    }
+  },
 })

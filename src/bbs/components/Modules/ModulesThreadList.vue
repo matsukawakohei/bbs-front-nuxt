@@ -52,6 +52,7 @@ interface Thread {
 export default {
   name: "ModulesThreadList",
   setup() {
+    const config = useRuntimeConfig();
     const route = useRoute();
 
     const threads = ref<Thread[]>([]);
@@ -74,7 +75,7 @@ export default {
     }
 
     const setThreads = async(page: number = 0, limit: number = 2) => {
-      const res: ThreadListResponse  = await $fetch('http://localhost:8888/threads', {
+      const res: ThreadListResponse  = await $fetch(`${config.public.apiUrl}/threads`, {
         method: 'GET',
         credentials: 'include', // 認証情報を送信する場合
         mode: 'cors',
